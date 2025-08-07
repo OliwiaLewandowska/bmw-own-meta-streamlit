@@ -130,6 +130,8 @@ else:
                 st.video(media_path)
             # Model label
             st.markdown(f"<div class='meta-label'><b>Model:</b> {row.get('model_label','')}</div>", unsafe_allow_html=True)
+            # Countryid
+            st.markdown(f"<div class='meta-label'><b>Country:</b> {row.get('countryid','')}</div>", unsafe_allow_html=True)
             # Overall Reach
             reach_val = int(row['overall_reach']) if pd.notnull(row['overall_reach']) else '-'
             reach_str = f"{reach_val:,}" if reach_val != '-' else '-'
